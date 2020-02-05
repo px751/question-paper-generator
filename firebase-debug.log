@@ -1,0 +1,85 @@
+[debug] [2020-02-02T16:20:47.973Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T16:20:47.978Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\gsree\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2020-02-02T16:20:47.979Z] CLI Version:   7.12.1
+[debug] [2020-02-02T16:20:47.979Z] Platform:      win32
+[debug] [2020-02-02T16:20:47.979Z] Node Version:  v12.14.1
+[debug] [2020-02-02T16:20:47.982Z] Time:          Sun Feb 02 2020 21:50:47 GMT+0530 (India Standard Time)
+[debug] [2020-02-02T16:20:47.982Z] ----------------------------------------------------------------------
+[debug] [2020-02-02T16:20:47.982Z] 
+[debug] [2020-02-02T16:20:48.009Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-02T16:20:48.010Z] > authorizing via signed-in user
+[debug] [2020-02-02T16:20:48.011Z] [iam] checking project question-paper-88003 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-02-02T16:20:48.014Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-02T16:20:48.015Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-02T16:20:48.603Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T16:20:48.761Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/question-paper-88003:testIamPermissions  
+
+[debug] [2020-02-02T16:20:51.362Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'question-paper-88003'...
+[info] 
+[info] i  deploying functions
+[debug] [2020-02-02T16:20:58.148Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.6.0",
+    "firebase-functions": "^3.3.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-02-02T16:20:58.149Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/question-paper-88003/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-02-02T16:20:58.150Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/question-paper-88003/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-02-02T16:21:00.584Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T16:21:01.251Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2020-02-02T16:21:01.255Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/question-paper-88003/adminSdkConfig  
+ 
+[debug] [2020-02-02T16:21:02.830Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2020-02-02T16:21:02.838Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/question-paper-88003/configs  
+ 
+[debug] [2020-02-02T16:21:04.058Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (26.97 KB) for uploading
+[debug] [2020-02-02T16:21:05.050Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/question-paper-88003/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-02-02T16:21:06.517Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-02T16:21:06.519Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-2b20b9a0-71ec-4d65-8306-68056832303b/448bc5e7-2cff-46d1-b8ab-959d33bef10e.zip?GoogleAccessId=service-744800141097@gcf-admin-robot.iam.gserviceaccount.com&Expires=1580662265&Signature=LXx8lP5u1kawbBTMfzwJXJUDSFT%2BwgdR27VB35KIvPtuVHGkIVvmAnRSAODs4RG1n2aOF1WLr1ZzuVaYvq%2FI2kaTTXqL1i6lPZypUJrSd9tGmIXiSLZxIxFAAHvar%2BcW945tml4JGzA1dCFnFYgFuIi9bYPJxy9bPA%2FcvUD7CxHTMXAIuQC8joNmR8N6EQayv%2BE0EtdRmqz7VK1rlrUv1qe8zALTe5DvS2fq8aYYzFmthaE3XygQdUEXNLEQa7To7bQ6erdMBNThrCQYnMy%2BVXy%2FwU29%2BSmM0dsEZkDQ3ConGtGMG2KjH0PTW9%2BlwAgUFAn2BhypgQ5Oy1V%2B%2BDi7sg%3D%3D  
+ <request body omitted>
+[debug] [2020-02-02T16:21:08.154Z] <<< HTTP RESPONSE 200
+[info] +  functions: functions folder uploaded successfully
+[debug] [2020-02-02T16:21:08.161Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/question-paper-88003/locations/-/functions  
+ 
+[debug] [2020-02-02T16:21:09.696Z] <<< HTTP RESPONSE 200
+[info] i  functions: updating Node.js 8 function deleteUser(us-central1)...
+[debug] [2020-02-02T16:21:09.703Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: updating Node.js 8 function getuserrole(us-central1)...
+[debug] [2020-02-02T16:21:09.705Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: updating Node.js 8 function addAdminRole(us-central1)...
+[debug] [2020-02-02T16:21:09.707Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: updating Node.js 8 function addFacultyRole(us-central1)...
+[debug] [2020-02-02T16:21:09.710Z] Trigger is:  {"httpsTrigger":{}}
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	setAdminRole(us-central1)
+	setFacultyRole(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
