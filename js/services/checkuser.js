@@ -10,7 +10,7 @@ function check_user(role){
                 window.location = "home.html";
             }
             else{
-                window.location = '../faculty/home.html';
+                window.location = 'faculty/home.html';
             }
 
         } else {
